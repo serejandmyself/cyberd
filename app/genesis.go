@@ -204,3 +204,9 @@ func validateGenesisStateAccounts(accs []GenesisAccount) (err error) {
 	}
 	return
 }
+
+func GetBurnAddress() (addr sdk.AccAddress) {
+	hex := "000000000000000000000000000000000000burn"
+	addr, _ = sdk.AccAddressFromHex(hex)
+	return
+}
